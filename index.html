@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Encriptador.css">
+    <script src="Encriptador.js"></script>
+    <title>Encriptador Alura</title>
+</head>
+<body>
+    <header>
+        <h1><img src="imagenes/logoalura.png"></h1>
+    </header>
+    <main class="main" >
+        <div class="container" >
+        <textarea  id="container-texto-encriptar" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <p class="container-infotext">&#128712 Solo letras minusculas y sin acentos</p>
+            <button class="container-encriptar" onclick="encriptar()">Encriptar!</button>
+            <button class="container-desencriptar" onclick="desEncriptar()">Desencriptar!</button>
+        </div>
+        <div class="container-encri">
+            <textarea name="textarea"id="textarea" cols="30" rows="10" readonly="readonly"></textarea>
+            <h2><img class ="container-cri-img-info"src="imagenes/Muñeco.png" id="container-cri-img-info" ></h2>
+            <p class="container-cri-parrafo-info" id="container-cri-parrafo-info">Ningún mensaje fué encontrado</p>
+            <p class="container-cri-parrafo-info-help" id="container-cri-parrafo-info-help">Ingrese el texto que desees encriptar o desencriptar</p>
+            <button class="container-cri-btn-copiar" id="container-cri-btn-copiar" onclick="copy()">Copiar</button>
+        </div>
+    </main>
+    
+    
+</body>
+</html>
