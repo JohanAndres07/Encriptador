@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/assets/Logo.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Encriptador.css">
-    <script src="Encriptador.js"></script>
+    <link rel="stylesheet" href="app.css">
     <title>Encriptador Alura</title>
 </head>
+
 <body>
-    <header>
-        <h1><img src="imagenes/logoalura.png"></h1>
-    </header>
-    <main class="main" >
-        <div class="container" >
-        <textarea  id="container-texto-encriptar" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-        <p class="container-infotext">&#128712 Solo letras minusculas y sin acentos</p>
-            <button class="container-encriptar" onclick="encriptar()">Encriptar!</button>
-            <button class="container-desencriptar" onclick="desEncriptar()">Desencriptar!</button>
+  <header class="logo">
+    <img src="/assets/Logo.svg" alt="">
+  </header>
+  <main>
+    <section>
+        <div class="container">
+            <div class="container-encriptar">
+                <textarea name="" id="" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"/></svg>
+                Solo letras minúsculas y sin acentos </p>
+            <div class="container-boton">
+                <button class="btn-encriptar">
+                    Encriptar
+                </button>
+                <button class="btn-desencriptar">
+                    Desencriptar
+                </button>
+
+            </div>
         </div>
-        <div class="container-encri">
-            <textarea name="textarea"id="textarea" cols="30" rows="10" readonly="readonly"></textarea>
-            <h2><img class ="container-cri-img-info"src="imagenes/Muñeco.png" id="container-cri-img-info" ></h2>
-            <p class="container-cri-parrafo-info" id="container-cri-parrafo-info">Ningún mensaje fué encontrado</p>
-            <p class="container-cri-parrafo-info-help" id="container-cri-parrafo-info-help">Ingrese el texto que desees encriptar o desencriptar</p>
-            <button class="container-cri-btn-copiar" id="container-cri-btn-copiar" onclick="copy()">Copiar</button>
+        <div class="container-texto">
+            <img src="assets/Muneco.svg" alt="">
+            <h2>Ningun mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+
+            <div class="container-copiar">
+                <textarea name="" id="" readonly></textarea>
+                <button class="btn-copiar">
+                    Copiar
+                </button>
+            </div>
         </div>
-    </main>
-    
-    
+       
+    </section>
+ 
+  </main>
+  <script src="/src//scripts/Encriptador.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+{
+  "name": "encriptador",
+  "version": "1.0.0",
+  "description": "Este es un desafío sobre la creación de un encriptador, desarrollado como parte del programa **Oracle Next Education**. La finalidad es construir una herramienta simple de encriptación y desencriptación de texto, aplicando técnicas de programación básica.",
+  "main": "Encriptador.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanAndres07/Encriptador.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohanAndres07/Encriptador/issues"
+  },
+  "homepage": "https://github.com/JohanAndres07/Encriptador#readme"
+}

@@ -1,0 +1,359 @@
+/* Aplicación de Encriptar y Desencriptar
+/// by: Johan Alarcón 
+/// LinkedIn: https://www.linkedin.com/in/johan-alarcon-083174123
+/// GitHub: https://github.com/JohanAndres07
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    background-color: #F3F5FC;
+}
+
+html,
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    color: #67808E;
+    font-size: .8rem;
+}
+
+p svg {
+    margin-right: 5px;
+}
+
+button {
+    width: 90vw;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.logo {
+    padding: 2rem 1rem;
+
+}
+
+.container {
+    width: 100vw;
+    padding: 1rem;
+}
+
+.container-encriptar textarea {
+    height: 12rem;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #0A3871;
+}
+
+.container-encriptar textarea::placeholder {
+    color: #0A3871;
+}
+
+.container-boton {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    font-size: .8rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-desencriptar {
+    color: #0A3871;
+    font-size: .8rem;
+    border: #0A3871 solid 1px;
+    cursor: pointer;
+}
+
+.container-texto {
+    box-sizing: border-box;
+    margin-top: 4rem;
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+    background-color: #ffffffff;
+    box-shadow: 0 0 30px rgba(95, 95, 95, 0.1);
+}
+.container-copiar{
+    display: none;
+}
+.container-texto img {
+    display: none;
+}
+
+.container-texto h2 {
+    height: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #343A40;
+    font-weight: bold;
+    background-color: #ffffffff;
+}
+
+
+.container-texto p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #343A40;
+    background-color: #ffffffff;
+}
+
+.container-copiar{
+    width: 100%;
+}
+.container-copiar textarea{
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #FFF;
+    color: #0A3871;
+}
+.btn-copiar{
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 1.5rem;
+    color: #000000;
+    border: #0A3871 solid 1px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+
+
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.2rem;
+
+    }
+
+    p svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .logo {
+        padding: 2rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+    .container-encriptar textarea {
+        height: 20rem;
+        font-size: 1.8rem;
+        font-weight: normal;
+        color: #0A3871;
+    }
+
+    .container-boton {
+        flex-direction: row;
+    }
+
+    .btn-desencriptar {
+        font-size: 1.2rem;
+    }
+
+    .btn-encriptar {
+        font-size: 1.2rem;
+    }
+
+    .container-texto img {
+        display: none;
+    }
+
+    .container-texto h2 {
+        font-size: 2rem;
+    }
+
+    .container-texto p {
+        font-size: 1.5rem;
+    }
+    .container-copiar{
+        width: 100%;
+    }
+    .container-copiar textarea{
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: #FFF;
+        color: #0A3871;
+    }
+    .btn-copiar{
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1.5rem;
+        color: #000000;
+        border: #0A3871 solid 1px;
+        font-size: .8rem;
+        cursor: pointer;
+    }
+    
+
+}
+
+@media (min-width: 1040px) {
+
+    header {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        top: -1rem;
+
+    }
+
+    main {
+        margin-top: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+
+    }
+
+    p svg {
+        width: 1rem;
+        height: 1rem;
+    }
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        padding: 3rem;
+    }
+
+    .container {
+        width: 60vw;
+        margin-left: 5rem;
+        height: 90vh;
+
+    }
+
+    .container p {
+        margin-top: calc(90vh - 66vh);
+    }
+
+    .container-encriptar textarea {
+        height: 20rem;
+        font-size: 1.8rem;
+        font-weight: normal;
+        color: #0A3871;
+    }
+
+    .container-boton {
+        flex-direction: row;
+    }
+
+    .btn-desencriptar {
+        font-size: 1.2rem;
+    }
+
+    .btn-encriptar {
+        font-size: 1.2rem;
+    }
+
+    .container-texto {
+        display: flex;
+        width: 20vw;
+        height: 90vh;
+        margin: 0;
+        padding: 2rem;
+        justify-content: center;
+    }
+
+    .container-texto img {
+        display: block;
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        background-color: #FFF;
+    }
+
+    .container-texto h2 {
+        font-size: 1.1rem;
+        margin: 0;
+        height: 3rem;
+    }
+
+    .container-texto p {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .container-copiar{
+        display: none;
+        width: 13rem;
+        height: 80%;
+    }
+    .container-copiar textarea{
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: #FFF;
+        color: #0A3871;
+    }
+    .btn-copiar{
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1.5rem;
+        color: #000000;
+        border: #0A3871 solid 1px;
+        font-size: .8rem;
+        cursor: pointer;
+    }
+    .btn-copiar:hover{
+        background-color: #0A3871;
+        color: #FFF;
+    }
+    .btn-encriptar:hover, .btn-desencriptar:hover{
+        transform: scale(1.05);
+        transition: all 0.1s ease-in-out;
+    }
+
+
+}
