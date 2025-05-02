@@ -4,15 +4,12 @@
 //github: https://github.com/JohanAndres07
 
 //Funcion encriptar
-
-
 function encriptar() {
-    var texto = document.querySelector(".container-encriptar textarea").value.toLowerCase();
-    var esEscritorio = window.matchMedia("(min-width: 1024px)").matches;
-
+    const texto = document.querySelector(".container-encriptar textarea").value.toLowerCase();
+    const esEscritorio = window.matchMedia("(min-width: 1024px)").matches;
 
     if (texto.length > 0) {
-        var txtCifrado = texto.replace(/e/igm, "enter"); 
+        let txtCifrado = texto.replace(/e/igm, "enter"); 
         txtCifrado = txtCifrado.replace(/o/igm, "ober");
         txtCifrado = txtCifrado.replace(/i/igm, "imes");
         txtCifrado = txtCifrado.replace(/a/igm, "ai");
@@ -23,30 +20,24 @@ function encriptar() {
         document.querySelector(".container-texto p").style.display = "none";
 
         document.querySelector(".container-copiar").style.display = "block";
-
-
         document.querySelector(".container-copiar textarea").value = txtCifrado;
 
-    }else{
+    } else {
         if (esEscritorio) {
             document.querySelector(".container-texto img").style.display = "block";
         }
         document.querySelector(".container-texto h2").style.display = "block";
         document.querySelector(".container-texto p").style.display = "block";
         document.querySelector(".container-copiar").style.display = "none";
-
-     
     }
 }
 
-//Funcion desencriptar
 function desencriptar() {
-    var texto = document.querySelector(".container-encriptar textarea").value.toLowerCase();
-
-    var esEscritorio = window.matchMedia("(min-width: 1024px)").matches;
+    const texto = document.querySelector(".container-encriptar textarea").value.toLowerCase();
+    const esEscritorio = window.matchMedia("(min-width: 1024px)").matches;
 
     if (texto.length > 0) {
-        var txtCifrado = texto.replace(/enter/igm, "e"); 
+        let txtCifrado = texto.replace(/enter/igm, "e"); 
         txtCifrado = txtCifrado.replace(/ober/igm, "o");
         txtCifrado = txtCifrado.replace(/imes/igm, "i");
         txtCifrado = txtCifrado.replace(/ai/igm, "a");
@@ -57,33 +48,27 @@ function desencriptar() {
         document.querySelector(".container-texto p").style.display = "none";
 
         document.querySelector(".container-copiar").style.display = "block";
-
         document.querySelector(".container-copiar textarea").value = txtCifrado;
-    }else{
+
+    } else {
         if (esEscritorio) {
             document.querySelector(".container-texto img").style.display = "block";
         }
         document.querySelector(".container-texto h2").style.display = "block";
         document.querySelector(".container-texto p").style.display = "block";
         document.querySelector(".container-copiar").style.display = "none";
-    
-     
     }
-    
 }
 
-//Funcion copiar
-function copiar(){
-    var contenido = document.querySelector(".container-copiar textarea");
-    navigator.clipboard.writeText(contenido.value)
-
+function copiar() {
+    const contenido = document.querySelector(".container-copiar textarea");
+    navigator.clipboard.writeText(contenido.value);
 }
 
-//Eventos
+// Eventos
 document.querySelector(".btn-encriptar").addEventListener("click", encriptar);
-
 document.querySelector(".btn-desencriptar").addEventListener("click", desencriptar);
-
 document.querySelector(".btn-copiar").addEventListener("click", copiar);
 
 
+    
